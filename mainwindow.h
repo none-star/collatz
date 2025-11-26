@@ -33,7 +33,7 @@ private:
     CollatzSolver solver_;
     QThread* workerThread_ = nullptr;
     std::atomic<bool> stopRequested_;
-    QMutex mutex_; // если понадобится синхронизация UI
 };
 
 #endif // MAINWINDOW_H
+
