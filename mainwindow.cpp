@@ -38,7 +38,6 @@ MainWindow::~MainWindow()
 }
 
 
-
 void MainWindow::on_exitButton_clicked()
 {
     close();
@@ -51,7 +50,6 @@ void MainWindow::on_startButton_clicked()
     ui->resTextEdit->clear();
     stopRequested_ = false;
 
-    // Очистка предыдущего потока, если он был
     if (workerThread_)
     {
         if (workerThread_->isRunning())
@@ -92,4 +90,5 @@ void MainWindow::on_threadsSlider_sliderMoved(int position)
 {
     QToolTip::showText(QCursor::pos(), QString::number(position), ui->threadsSlider);
 }
+
 
